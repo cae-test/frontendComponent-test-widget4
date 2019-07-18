@@ -53,7 +53,15 @@ var initClient = function(y) {
 
  
 function refreshImages(){ 
- 
+ this.client.sendRequest("GET", "", "", "application/json", {}, false, 
+   function (data, type) {
+     var images = data.images;
+     var imageHtml = "";
+     images.forEach(function (image) {
+       imageHtml+=`<img src="${image}" alt="image">`;
+     });
+     document.getElementById("images").innerHTML = imageHtml;
+   }, console.error)
 } 
 
 $(document).ready(function() {
