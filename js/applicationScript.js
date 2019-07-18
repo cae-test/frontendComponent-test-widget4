@@ -37,7 +37,7 @@ var init = function() {
   var iwcCallback = function(intent) {
     // define your reactions on incoming iwc events here 
     console.log(intent);
-
+    refreshImages();
   };
 
   client = new Las2peerWidgetLibrary("http://cloud10.dbis.rwth-aachen.de:8086/images", iwcCallback);
