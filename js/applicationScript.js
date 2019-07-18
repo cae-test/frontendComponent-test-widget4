@@ -40,7 +40,7 @@ var init = function() {
 
   };
 
-  client = new Las2peerWidgetLibrary("http://cloud10.dbis.rwth-aachen.de:8086/images", iwcCallback);
+  client = new Las2peerWidgetLibrary("127.0.0.1/images", iwcCallback);
 
   refreshImages(); 
   document.getElementById("submit-button").onclick = uploadImage;
