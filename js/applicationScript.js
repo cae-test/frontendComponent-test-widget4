@@ -74,8 +74,12 @@ function uploadImage(){
     // Closure to capture the file information.
     reader.onload = (function(theFile) {
       return function(e) {
-
-        console.error( e.target.result );
+        var imageString = e.target.result;
+        console.debug( imageString );
+        this.client.sendRequest("GET", "", JSON.stringify({image: imageString}), "text/plain", {}, false,
+          function (data, type) {
+            refreshImages();
+          }, console.error)
       };
     })(file);
 
