@@ -2,3 +2,8 @@
 margin-top:20px;
 width:100%;
 }
+
+#images{
+  overflow: scroll;
+  height: 370px;
+}
