@@ -53,7 +53,7 @@ var initClient = function(y) {
 
  
 function refreshImages(){ 
- this.client.sendRequest("GET", "", "", "application/json", {}, false, 
+ this.client.sendRequest("GET", "", "", "text/plain", {}, false,
    function (data, type) {
      var images = data.images;
      var imageHtml = "";
