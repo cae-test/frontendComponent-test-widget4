@@ -63,6 +63,25 @@ function refreshImages(){
      document.getElementById("images").innerHTML = imageHtml;
    }, console.error)
 } 
+ 
+function uploadImage(){
+  var files = document.getElementById("image-input").files;
+  if(files){
+    var file = files[0];
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
+
+        console.error( e.target.result );
+      };
+    })(file);
+
+    // Read in the image file as a data URL.
+    reader.readAsText(file);
+  }
+}
 
 $(document).ready(function() {
   init();
