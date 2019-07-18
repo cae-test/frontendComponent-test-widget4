@@ -59,7 +59,7 @@ function refreshImages(){
      var images = data.images;
      var imageHtml = "";
      images.forEach(function (image) {
-       imageHtml+=`<img src="${image}" alt="image">`;
+       imageHtml+=`<img src="${image}" alt="image" style="width: 100%">`;
      });
      document.getElementById("images").innerHTML = imageHtml;
    }, console.error)
