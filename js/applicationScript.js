@@ -80,7 +80,7 @@ function uploadImage(){
     })(file);
 
     // Read in the image file as a data URL.
-    reader.readAsText(file);
+    reader.readAsDataURL(file);
   }
 }
 
