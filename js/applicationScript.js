@@ -42,7 +42,8 @@ var init = function() {
 
   client = new Las2peerWidgetLibrary("http://cloud10.dbis.rwth-aachen.de:8086/images", iwcCallback);
 
-  refreshImages();
+  refreshImages(); 
+  document.getElementById("submit-button").onclick = uploadImage;
 
 }
 
