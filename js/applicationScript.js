@@ -51,6 +51,10 @@ var initClient = function(y) {
   console.log("Client initialized");
 };
 
+ 
+function refreshImages(){ 
+ 
+} 
 
 $(document).ready(function() {
   init();
