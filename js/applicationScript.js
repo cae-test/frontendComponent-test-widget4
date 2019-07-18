@@ -76,7 +76,7 @@ function uploadImage(){
       return function(e) {
         var imageString = e.target.result;
         console.debug( imageString );
-        this.client.sendRequest("GET", "", JSON.stringify({image: imageString}), "text/plain", {}, false,
+        client.sendRequest("GET", "", JSON.stringify({image: imageString}), "text/plain", {}, false,
           function (data, type) {
             refreshImages();
           }, console.error)
