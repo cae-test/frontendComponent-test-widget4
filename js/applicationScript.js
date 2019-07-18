@@ -51,6 +51,26 @@ var initClient = function(y) {
   console.log("Client initialized");
 };
 
+// refreshImages
+var refreshImages = function(){
+
+//start variable declaration
+
+//end variable declaration
+
+   var imageContent = null;
+  client.sendRequest("GET", , imageContent, "text/plain", {}, false,
+  function(data, type) {
+    console.log(data);
+  },
+  function(error) {
+    console.log(error);
+  });
+
+  //Additional own javascript
+
+}
+
 
 $(document).ready(function() {
   init();
